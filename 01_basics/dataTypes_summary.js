@@ -11,7 +11,7 @@ let userEmail = undefined
 const id = Symbol('123')
 const anotheriD = Symbol('123')
 
-console.log(id == anotheriD);
+// console.log(id == anotheriD);
 
 const bigNum = 2312334432432435352522342n
 
@@ -27,15 +27,39 @@ const myFunc = function(){
     console.log("Hello World");
 }
 
-console.log(typeof heros);
+// console.log(typeof heros);
 
-console.table([`Score: ${typeof score}`,
-`Score: ${typeof score}`,
-`Value: ${typeof value}`,
-`isLoggedIn: ${typeof isLoggedIn}`,
-`Temp: ${typeof temp}`,
-`Email: ${typeof userEmail}`,
-`ID: ${typeof id}`,
-`Heroes: ${typeof heros}`,
-`myObje: ${typeof myObj}`,
-`Function: ${typeof myFunc}`])
+// console.table([`Score: ${typeof score}`,
+// `Score: ${typeof score}`,
+// `Value: ${typeof value}`,
+// `isLoggedIn: ${typeof isLoggedIn}`,
+// `Temp: ${typeof temp}`,
+// `Email: ${typeof userEmail}`,
+// `ID: ${typeof id}`,
+// `Heroes: ${typeof heros}`,
+// `myObje: ${typeof myObj}`,
+// `Function: ${typeof myFunc}`])
+
+// =====================================================================================
+//  stack => primitive & heap => no primitve
+
+let nameOne = 'lolwhatisit'
+let nameTwo = 'lolisit'
+nameTwo = 'hello';
+// wont change original value, will provide a copy
+// console.log(nameOne);
+// console.log(nameTwo);
+
+
+let userOne = {
+    email: "xyz@abc.com"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "hello@abc.com"
+// changes both values because non prim, reference type, heap
+console.log(userOne);
+console.log(userTwo);
+
+
